@@ -9,24 +9,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
   <body>
-  	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="project-name navbar-brand">
-            <%= link_to "CFBlog", root_path %>
-          </div><!-- end projectName -->
-        </div><!-- end navbar-header -->
-      </div><!--end nav container -->
-    </nav><!-- end navbar -->
+    <%= render 'layouts/header' %>
+    <% if notice %>
+      <div class="alert alert-success" id="notice"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" id="alert"><%= alert %></div>
+    <% end %>
 
     <%= yield %>
 
-    <footer>
-	    &copy; 2017 Brian Mikol
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
