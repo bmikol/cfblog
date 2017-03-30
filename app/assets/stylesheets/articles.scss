@@ -2,27 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* ----------------------------------------
+//  ----------------------------------------
+//
+//  1. Base Styles
+//  2. Page Elements
+//  	2.1 Nav
+//  	2.2 Articles
+//  	2.3 Sidebar
+//  	2.4 Footer
+//  3. Typography
+//
+//  ----------------------------------------
 
-1. Base Styles
-2. Page Elements
-	2.1 Nav
-	2.2 Articles
-	2.3 Sidebar
-	2.4 Footer
-3. Typography
-
----------------------------------------- */
-
-/* 1. Base Styles ---------------------- */
+//  1. Base Styles -------------------------
 
 body {
 	padding-top: 70px;
 }
 
-/* 2. Page Elements -------------------- */
+//  2. Page Elements -----------------------
 
-/* 2.1 Nav ----------------------------- */
+//    2.1 Nav ------------------------------
 
 // .navbar-inverse,
 // .navbar-inverse a:hover {
@@ -35,7 +35,7 @@ body {
 // 	color: white;
 // }
 
-/* 2.2 Articles ------------------------ */
+//    2.2 Articles -------------------------
 
 .artbody {
 	margin-left: -2.5em;
@@ -45,7 +45,7 @@ body {
 	margin-top: 0em;
 }
 
-/* 2.3 Sidebar ------------------------- */
+//    2.3 Sidebar --------------------------
 
 .featured-spot {
 	border: 1px solid black;
@@ -56,7 +56,7 @@ body {
 	padding-bottom: 1em;
 }
 
-/* 2.4 Footer -------------------------- */
+//    2.4 Footer ---------------------------
 
 footer {
 	background-color: #333;
@@ -70,7 +70,7 @@ footer {
 	right: 0;
 }
 
-/* 3. Typography ----------------------- */
+//  3. Typography -------------------------
 
 h1 {
 	font-family: Helvetica, Futura, Arial, sans-serif;
