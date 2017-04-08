@@ -12,6 +12,9 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    if request.path != article_path(@article)
+      redirect_to @article, status: :moved_permanently
+    end
     @comment_count = @article.comments.count
     @comments = @article.comments.order('created_at DESC').paginate(page: params[:page], per_page: 2)
     @featured = Article.last
@@ -69,7 +72,7 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

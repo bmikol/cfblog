@@ -3,5 +3,6 @@ class Article < ApplicationRecord
   has_many :comments
   validates :body, presence: true
   validates :title, presence: true
-  validates :user, presence: true
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
 end

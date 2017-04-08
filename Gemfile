@@ -35,6 +35,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 # Use will_paginate for pagination
 gem 'will_paginate', '~> 3.1.0'
+# Use friendly_id for search spider- and human-friendly URLs
+gem 'friendly_id', '~> 5.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
