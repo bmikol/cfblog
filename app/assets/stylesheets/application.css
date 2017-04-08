@@ -91,7 +91,8 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: @screen-sm-min) {
+@media screen and (min-width: 768px) {
+  /* @screen-sm-min */
   .nav ul {
     text-align: center;
     text-indent: 0;
