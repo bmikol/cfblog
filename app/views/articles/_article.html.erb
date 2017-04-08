@@ -1,0 +1,14 @@
+<article>
+  <h2><%= link_to article.title, article %></h2>
+  <h6><%= article.create_date.strftime("%d %B %Y") %>, <%= article.create_time.strftime("%l:%M %p %Z") %>
+    <% if signed_in? %>
+      | <%= link_to 'Edit', edit_article_path(article) %>
+      <% if current_user.admin? %>
+        | <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end %>
+  </h6>
+  <div class="artbody">
+    <%= simple_format(article.body) %>
+  </div>
+</article>

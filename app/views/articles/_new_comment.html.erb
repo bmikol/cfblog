@@ -1,0 +1,10 @@
+<% if signed_in? %>
+	<h4>Add a Comment!</h4>
+	<%= form_for([@article, @article.comments.build]) do |f| %>
+		<div class="form-group">
+			<%= f.label :body, "Comments" %>
+			<%= f.text_area :body, id: "comment-area" %>
+		</div><!-- /form-group -->
+		<%= submit_tag("Submit", class: "btn btn-default submit") %>
+	<% end %>
+<% end %>

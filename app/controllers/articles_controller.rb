@@ -1,16 +1,19 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:show, :index]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.order('created_at DESC').paginate(page: params[:page], per_page: 2)
     @featured = Article.last
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @comment_count = @article.comments.count
+    @comments = @article.comments.order('created_at DESC').paginate(page: params[:page], per_page: 2)
     @featured = Article.last
   end
 

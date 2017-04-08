@@ -1,22 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
-      <h2><%= @article.title %></h2>
-      <h6>Posted on <%= @article.create_date %> at <%= @article.create_time %> | <%= link_to 'Edit', edit_article_path(@article) %> | <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %></h6>
-      <div class="artbody">
-        <%= simple_format(@article.body) %>
-      </div>
-    </div><!-- /col -->
-    <div class="col-sm-12 col-md-4">
-      <div class="featured-spot">
-        <h3>Featured Article</h3>
-        <h4><%= link_to @featured.title, @featured %></h4>
-        <div class="featured">
-          <%= @featured.body[0..255] + CGI.unescapeHTML("&#8230;") %>
-        </div><!-- /featured -->
-      </div><!-- /featured-spot -->
-    </div><!-- /col -->
-  </div><!-- /row -->
-
-<%= link_to 'Back', articles_path %>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <% if signed_in? && current_user.admin? %>
+      <%= link_to 'New Article', new_article_path %>
+    <% end %>
+    <%= render @article %>
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
+    <%= will_paginate @comments, class: 'apple_pagination' %>
+  </div><!-- /col -->
+</div><!-- /row -->

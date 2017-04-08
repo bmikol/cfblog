@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
     @email = params[:email]
     @message = params[:message]
     ActionMailer::Base.mail(from: @email,
-                            to: 'github@sffogworks.com',
+                            to: ENV['EMAIL_ADDRESS'],
                             subject: "A new contact form message from #{@name}",
                             body: @message).deliver_now
   end

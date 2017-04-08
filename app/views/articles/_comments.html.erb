@@ -1,0 +1,18 @@
+<div class="comments">
+	<% if @article.comments.exists? %>
+		<h3><%= @comment_count %> Comments</h3>
+		<% @comments.each do |comment| %>
+			<hr>
+			<h5>
+				By <%= comment.user.first_name %> <small><em> <%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+					<% if signed_in? && current_user.admin? %>
+						<%= link_to ('<span class="glyphicon glyphicon-remove"></span> Delete').html_safe, article_comment_path(comment.article, comment), class: 'destroy', method: :delete, data: { confirm: 'Are you sure?' } %>
+					<% end %>
+			</h5>
+			<p class="comment-body"><%= comment.body %></p>
+		<% end %>
+	<% else %>
+		<h3>Comments</h3>
+		<p>There are no comments yet.<% if signed_in? %> Add yours above now!<% end %></p>
+	<% end %>
+</div><!-- /comments -->

@@ -1,29 +1,15 @@
-<div class="container-fluid">
-
-  <p id="notice"><%= notice %></p>
-
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
-      <% @articles.reverse_each do |article| %>
-        <h2><%= link_to article.title, article %></h2>
-        <h6>Posted on <%= article.create_date %> at <%= article.create_time %> | <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></h6>
-        <div class="artbody">
-          <%= simple_format(article.body) %>
-        </div>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <% if @articles.exists? %>
+      <% if signed_in? %>
+        <%= link_to 'New Article', new_article_path %>
       <% end %>
-    </div><!-- /col -->
-    <div class="col-sm-12 col-md-4">
-      <div class="featured-spot">
-        <h3>Featured Article</h3>
-        <h4><%= link_to @featured.title, @featured %></h4>
-        <div class="featured">
-          <%= @featured.body[0..255] + CGI.unescapeHTML("&#8230;") %>
-        </div><!-- /featured -->
-      </div><!-- /featured-spot -->
-    </div><!-- /col -->
-  </div><!-- /row -->
-
-  <br>
-
-  <%= link_to 'New Article', new_article_path %>
-</div><!-- /container-fluid -->
+      <% @articles.each do |article| %>
+        <%= render article %>
+      <% end %>
+    <% else %>
+      <p>There&rsquo;s nothing here! <%= link_to 'Get writing!', new_article_path %></p>
+    <% end %>
+    <%= will_paginate @articles, class: 'apple_pagination' %>
+  </div><!-- /col -->
+</div><!-- /row -->
