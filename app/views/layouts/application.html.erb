@@ -14,15 +14,15 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <% if notice %>
-      <div class="alert alert-success" id="notice"><%= notice %></div>
-    <% end %>
-    <% if alert %>
-      <div class="alert alert-danger" id="alert"><%= alert %></div>
-    <% end %>
-
-    <%= yield %>
-
+    <div class="container-fluid">
+      <% if notice %>
+        <div class="alert alert-success" id="notice"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger" id="alert"><%= alert %></div>
+      <% end %>
+      <%= yield %>
+    </div><!-- /container-fluid -->
     <%= render 'layouts/footer' %>
   </body>
 </html>

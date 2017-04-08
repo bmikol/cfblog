@@ -1,24 +1,22 @@
 <div class="row">
-  <div class="contact-form">
-    <%= form_tag("/static_pages/thank_you") do %>
-      <div class="row">
-        <div class="col-md-4">
-          <%= flash[:notice] %>
-          <div class="form-group">
-            <%= label_tag :name, "Name:" %>
-            <%= text_field_tag :name, nil, class: "form-control", placeholder: "Your Name", :required => true %>
-          </div><!-- /form-group -->
-          <div class="form-group">
-            <%= label_tag :email, "Email:" %>
-            <%= email_field_tag :email, nil, class: "form-control", placeholder: "Your Email Address", :required => true %>
-          </div><!-- /form-group -->
-          <div class="form-group">
-            <%= label_tag :message, "Message:" %>
-            <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your Message" , :required => true %>
-          </div><!-- /form-group -->
-          <%= submit_tag "Send Message" %>
-        </div><!-- /col-md-4 -->
-      </div><!-- /row -->
-    <% end %>
-  </div><!-- /contact-form -->
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="contact-form">
+      <%= form_tag("/static_pages/thank_you") do %>
+        <%= flash[:notice] %>
+        <div class="form-group">
+          <%= label_tag :name, "Name:" %>
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Your Name", :required => true %>
+        </div><!-- /form-group -->
+        <div class="form-group">
+          <%= label_tag :email, "Email:" %>
+          <%= email_field_tag :email, nil, class: "form-control", placeholder: "Your Email Address", :required => true %>
+        </div><!-- /form-group -->
+        <div class="form-group">
+          <%= label_tag :message, "Message:" %>
+          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your Message" , :required => true %>
+        </div><!-- /form-group -->
+        <%= submit_tag "Send Message" %>
+      <% end %>
+    </div><!-- /contact-form -->
+  </div><!-- /col -->
 </div><!-- /row -->

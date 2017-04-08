@@ -4,88 +4,52 @@
 
 //  ----------------------------------------
 //
-//  1. Base Styles
-//  2. Page Elements
-//  	2.1 Nav
-//  	2.2 Articles
-//  	2.3 Sidebar
-//  	2.4 Footer
-//  3. Typography
+//  1. Articles
+//  2. Sidebar
 //
 //  ----------------------------------------
 
-//  1. Base Styles -------------------------
+//  1. Articles ----------------------------
 
-body {
-	padding-top: 70px;
+article {
+  width: 100%;
 }
-
-//  2. Page Elements -----------------------
-
-//    2.1 Nav ------------------------------
-
-// .navbar-inverse,
-// .navbar-inverse a:hover {
-// 	background-color: #333;
-// 	text-decoration: none;
-// }
-//
-// .navbar-header,
-// .project-name a {
-// 	color: white;
-// }
-
-//    2.2 Articles -------------------------
 
 .artbody {
-	margin-left: -2.5em;
+  margin-left: -2.5em;
+
+  p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
-.artbody p:first-of-type {
-	margin-top: 0em;
+/*ol, ul {
+  padding-left: 1em;
+  margin-top: 0;
+  text-indent: -1em;
 }
 
-//    2.3 Sidebar --------------------------
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 0 0 0 3rem;
+  font-size: 100%;
+}
+
+li {
+  margin-bottom: 0;
+}*/
+
+
+// 2. Sidebar ------------------------------
 
 .featured-spot {
-	border: 1px solid black;
-	padding: 0 2em 2em 2em;
-}
+  border: 1px solid black;
+  padding: 0 2em 2em;
 
-.featured-spot h3 {
-	padding-bottom: 1em;
-}
-
-//    2.4 Footer ---------------------------
-
-footer {
-	background-color: #333;
-	color: white;
-	height: 3.5em;
-	width: 100%;
-	padding-top: 1em;
-	text-align: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-}
-
-//  3. Typography -------------------------
-
-h1 {
-	font-family: Helvetica, Futura, Arial, sans-serif;
-	color: #333;
-	text-align: center;
-}
-
-h3 {
-	text-align: center;
-}
-
-h6 {
-	color: #BCBCBC;
-}
-
-.featured {
-	text-overflow: ellipsis;
+  h3 {
+    padding-bottom: 1em;
+  }
 }
