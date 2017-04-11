@@ -5,13 +5,13 @@
         <%= devise_error_messages! %>
         <h2 class="form-login-heading">Sign up</h2>
         <%= f.label :email, class: 'sr-only', for: 'inputEmail' %>
-        <%= f.email_field :email, class: 'form-control', id: 'inputEmail', placeholder: 'Email address', required: true, autofocus: true %>
+        <%= f.email_field :email, class: 'form-control login-form', id: 'inputEmail', placeholder: 'Email address', required: true, autofocus: true %>
         <%= f.label :password, class: 'sr-only', for: 'inputPassword' %>
-        <%= f.password_field :password, class: 'form-control', id: 'inputPassword', placeholder: "Password (#{ @minimum_password_length } characters minimum)", required: true, autocomplete: 'off' %>
+        <%= f.password_field :password, class: 'form-control login-form', id: 'inputPassword', placeholder: "Password (#{ @minimum_password_length } characters minimum)", required: true, autocomplete: 'off' %>
         <%= f.label :password_confirmation, class: 'sr-only', for: 'confirmPassword' %>
-        <%= f.password_field :password_confirmation, class: 'form-control', id: 'confirmPassword', placeholder: 'Password (Confirmation)', required: true, autocomplete: 'off' %>
+        <%= f.password_field :password_confirmation, class: 'form-control login-form', id: 'confirmPassword', placeholder: 'Password (Confirmation)', required: true, autocomplete: 'off' %>
 
-        <%= f.submit 'Sign up', class: 'btn btn-lg btn-primary btn-block' %>
+        <%= f.submit 'Sign up', class: 'btn btn-lg btn-primary btn-block login-form' %>
       <% end %>
 
       <div class="auth-links">

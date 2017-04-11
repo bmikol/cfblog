@@ -6,9 +6,9 @@
         <h2 class="form-login-heading">Forgot your password?</h2>
         <p>Don&rsquo;t worry, we&rsquo;ll send you password instructions.</p>
         <%= f.label :email, class: 'sr-only', for: 'inputEmail' %>
-        <%= f.email_field :email, class: 'form-control', id: 'inputEmail', placeholder: 'Email address', required: true, autofocus: true %>
+        <%= f.email_field :email, class: 'form-control login-form', id: 'inputEmail', placeholder: 'Email address', required: true, autofocus: true %>
 
-        <%= f.submit 'Submit', class: 'btn btn-lg btn-primary btn-block' %>
+        <%= f.submit 'Submit', class: 'btn btn-lg btn-primary btn-block login-form' %>
       <% end %>
 
       <div class="auth-links">

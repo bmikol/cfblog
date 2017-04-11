@@ -120,6 +120,7 @@ div[class^="col-"] {
 
 .apple_pagination {
   text-align: center;
+  margin-left: -2em;
   padding: 1em;
   cursor: default;
 }
@@ -192,7 +193,7 @@ div[class^="col-"] {
 
 .form-login,
 .login {
- max-width: 330px;
+ max-width: 300px;
  margin: 0 auto;
 }
 
@@ -228,6 +229,10 @@ div[class^="col-"] {
 
 .form-login input[type="submit"] {
  margin-top: 10px;
+}
+
+.login-form {
+  max-width: 90%;
 }
 
 .remember {

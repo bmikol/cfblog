@@ -6,11 +6,11 @@
         <%= f.hidden_field :reset_password_token %>
         <h2 class="form-login-heading">Update Your Password</h2>
         <%= f.label :password, class: 'sr-only', for: 'inputPassword' %>
-        <%= f.password_field :password, class: 'form-control', id: 'inputPassword', placeholder: "New Password (#{ @minimum_password_length } characters minimum)", required: true, autocomplete: 'off' %>
+        <%= f.password_field :password, class: 'form-control login-form', id: 'inputPassword', placeholder: "New Password (#{ @minimum_password_length } characters minimum)", required: true, autocomplete: 'off' %>
         <%= f.label :password_confirmation, class: 'sr-only', for: 'confirmPassword' %>
-        <%= f.password_field :password_confirmation, class: 'form-control', id: 'confirmPassword', placeholder: 'New Password (Confirmation)', required: true, autocomplete: 'off' %>
+        <%= f.password_field :password_confirmation, class: 'form-control login-form', id: 'confirmPassword', placeholder: 'New Password (Confirmation)', required: true, autocomplete: 'off' %>
 
-        <%= f.submit 'Update Password', class: 'btn btn-lg btn-primary btn-block' %>
+        <%= f.submit 'Update Password', class: 'btn btn-lg btn-primary btn-block login-form' %>
       <% end %>
 
       <div class="auth-links">
