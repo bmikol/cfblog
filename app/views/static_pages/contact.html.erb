@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
     <div class="contact-form">
       <%= form_tag("/static_pages/thank_you") do %>
         <%= flash[:notice] %>
@@ -15,7 +15,7 @@
           <%= label_tag :message, "Message:" %>
           <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your Message" , :required => true %>
         </div><!-- /form-group -->
-        <%= submit_tag "Send Message" %>
+        <%= submit_tag "Send Message", class: 'btn btn-lg btn-primary btn-block' %>
       <% end %>
     </div><!-- /contact-form -->
   </div><!-- /col -->
